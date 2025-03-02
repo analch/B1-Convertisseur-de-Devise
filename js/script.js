@@ -28,12 +28,12 @@ function swapCurrencies() {
 
 converterForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    const valueIn = parseFloat(inputInValue.value);
+    const valueIn = Number(inputInValue.value);
     const changeRateValueIn = getChangeRate(currencyIn.value)
     const changeRateValueOut = getChangeRate(currencyOut.value);
     const conversionResult = convertCurrencies(valueIn, changeRateValueIn.value, changeRateValueOut.value)
 
-    inputOutValue.textContent = `${conversionResult.toFixed(2)} ${currencyOut.value}`;
+    inputOutValue.textContent = `Résultat : ${conversionResult.toFixed(2)} ${currencyOut.value}`;
 
 
 });

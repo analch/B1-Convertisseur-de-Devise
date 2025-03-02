@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html data-theme="light" lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>convertisseur de devises</title>
@@ -8,9 +8,9 @@
 </head>
 
 <body class="bg-slate-700">
-<header id="header" class="p-4">
+<header class="p-4" id="header">
     <nav>
-        <ul id="itemList" class="bg-green-600 p-4 flex flex-row gap-6 justify-center rounded-xl font-bold ">
+        <ul class="bg-green-600 p-4 flex flex-row gap-6 justify-center rounded-xl font-bold " id="itemList">
             <li class="hover:underline hover:text-white"><a href="#header">Accueil</a></li>
             <li class="hover:underline hover:text-white"><a href="#convertisseur">Convertisseur</a></li>
             <li class="hover:underline hover:text-white"><a href="#compte">Compte</a></li>
@@ -40,17 +40,18 @@
 
     <section class="text-center">
         <div class="flex flex-col items-center">
-            <form method="post" id="currenciesConverter"
-                  class="flex flex-col items-center gap-6 border-4 border-green-600 text-white rounded-lg bg-green-600 w-fit p-8">
+            <form class="flex flex-col items-center gap-6 border-4 border-green-600 text-white rounded-lg bg-green-600 w-fit p-8"
+                  id="currenciesConverter"
+                  method="post">
                 <div class="flex flex-row gap-6 justify-center">
                     <label>
                         <span>Entrez une valeur</span>
-                        <input type="number" class="text-black" step="0.01" placeholder="1..." name="valueIn" required
-                               id="valueIn"/>
+                        <input class="text-black" id="valueIn" name="valueIn" placeholder="1..." required step="0.01"
+                               type="number"/>
                     </label>
 
                     <label>
-                        <select required class="text-black" id="currencyIn">
+                        <select class="text-black" id="currencyIn" required>
                             <option disabled selected>-- Choisir une devise à convertir --</option>
                             <option value="USD">Dollars ($)</option>
                             <option value="EUR">Euro (€)</option>
@@ -60,16 +61,17 @@
                     </label>
 
                     <button onclick="swapCurrencies()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                             class="lucide lucide-code">
+                        <svg class="lucide lucide-code" fill="none" height="24" stroke="currentColor"
+                             stroke-linecap="round"
+                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+                             xmlns="http://www.w3.org/2000/svg">
                             <polyline points="16 18 22 12 16 6"/>
                             <polyline points="8 6 2 12 8 18"/>
                         </svg>
                     </button>
 
                     <label>
-                        <select required class="text-black" id="currencyOut">
+                        <select class="text-black" id="currencyOut" required>
                             <option disabled selected>-- Choisir une devise cible --</option>
                             <option value="USD">Dollars ($)</option>
                             <option value="EUR">Euro (€)</option>
@@ -78,24 +80,26 @@
                         </select>
                     </label>
                 </div>
-                <button type="submit" onclick="convertCurrency()"
-                        class="bg-yellow-500 text-white w-fit rounded-lg py-3 px-9 font-bold hover:bg-yellow-300">
+                <button class="bg-yellow-500 text-white w-fit rounded-lg py-3 px-9 font-bold hover:bg-yellow-300"
+                        type="submit">
                     Convertir
                 </button>
                 <div class="flex flex-row gap-12 justify-center bg-slate-700 p-3 flex flex-row rounded-xl">
                     <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                             class="lucide lucide-corner-down-right">
+                        <svg class="lucide lucide-corner-down-right" fill="none" height="24" stroke="currentColor"
+                             stroke-linecap="round"
+                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+                             xmlns="http://www.w3.org/2000/svg">
                             <polyline points="15 10 20 15 15 20"/>
                             <path d="M4 4v7a4 4 0 0 0 4 4h12"/>
                         </svg>
                     </p>
                     <p class="text-white" id="valueOut">Résultat :</p>
                     <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                             class="lucide lucide-corner-down-left">
+                        <svg class="lucide lucide-corner-down-left" fill="none" height="24" stroke="currentColor"
+                             stroke-linecap="round"
+                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+                             xmlns="http://www.w3.org/2000/svg">
                             <polyline points="9 10 4 15 9 20"/>
                             <path d="M20 4v7a4 4 0 0 1-4 4H4"/>
                         </svg>
@@ -104,7 +108,7 @@
             </form>
         </div>
     </section>
-    
+
     <section>
         <h2 class="text-center text-3xl text-white">Convertisseurs les + POPULAIRES</h2>
 
