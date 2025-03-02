@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>convertisseur de devises</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<header>
+    <nav class="nav">
+        <section>
+            <ol>
+                <ul id="itemList">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="convertisseur.html">Convertisseur</a></li>
+                    <li><a href="compte.html">Compte</a></li>
+                </ul>
+            </ol>
+        </section>
+    </nav>
+</header>
+
+<section>
+    <h1 class="pageTitle">Convertisseur de devises</h1>
+    <div class="center-paragraph">
+        <p id="texte1"> Nous mettons à votre disposition un convertisseur de devises, qui vous permet de convertir
+            plus de 150 monnaies instantanément et gratuitement, et de connaître le taux de change en direct.</p>
+        <p id="texte2">Vous pouvez convertir entre elles les devises les plus populaires (Euro EUR, Dollar US USD,
+            Yen japonais JPY, Livre Sterling GBP, Franc Suisse CHF...).
+            Et aussi toutes les monnaies du monde comme le dollar canadien CAD, le Dollar Hong Kong HKD, le Rand
+            sud-africain ZAR, le Yuan chinois CNY, le Baht Thaïlandais THB, le Réal brésilien BRS, le Dirham
+            marocain MAD, le Dinar tunisien TND, le Peso mexicain MXN...</p>
+        <p id="texte3">Vous entrez dans le calculateur le montant que vous souhaitez convertir, vous indiquez la
+            devise d'origine et la devise qui vous intéresse. Et vous obtenez instantanément le montant dans la
+            devise souhaitée, avec le taux de change entre les 2 monnaies.</p>
+    </div>
+
+</section>
+
+<h2 class="h3">CONVERSIONS DE MONNAIE</h2>
+
+<div class="devise1">
+    <input type="number1" id=" inpout--eurgbp" step="0.00001">
+    <span> Devise d'origine</span>
+</div>
+
+<i class="c-Devise d'origine__reverse-icon / c-icon c-icon--Devise souhaitée"></i>
+<input type="submit" class="convert c-field__input " name="btn-convert" value="Convertir">
+<span class="egal"></span>
+
+<div class="devise2">
+    <input type="number2" id=" inpout--gbpeur" step="0.00001">
+    <span> Devise souhaitée</span>
+</div>
+
+<h4 class="insérer">Veuiller sélectionner une valeur</h4>
+
+<div class="carre">
+    <form>
+        <label for="valeur d'origine">valeur d'origine</label>
+        <select id="devise-source">
+            <option value="USD">Dollars ($)</option>
+            <option value="EUR">Euro (€)</option>
+            <option value="GBP">Livres (£)</option>
+            <option value="JPY">Yens (¥)</option>
+        </select>
+        <label>valeur souhaitée</label>
+        <select id="devise-cible">
+            <option value="USD">Dollars ($)</option>
+            <option value="EUR">Euro (€)</option>
+            <option value="GBP">Livres (£)</option>
+            <option value="JPY">Yens (¥)</option>
+        </select>
+    </form>
+</div>
+
+<hr class="custom-line">
+
+<h2 class="h2">CONVERSIONS LES + POPULAIRES</h2>
+
+<table class="tableau">
+    <thead>
+    <tr>
+        <th>EUR</th>
+        <th>USD</th>
+        <th>JPY</th>
+        <th>GBP</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>EUR(euro) > GBP (livre sterling)</td>
+        <td>USD(dollar) > GBP (livre sterling)</td>
+        <td>JPY(yen) > GBP (livre sterling)</td>
+        <td>GBP(livre sterling) > USD (dollar)</td>
+    </tr>
+    </tbody>
+    <tbody>
+    <tr>
+        <td>EUR(euro) > JPY (yen)</td>
+        <td>USD(dollar) > JPY (yen)</td>
+        <td>JPY(yen) > USD (dollar)</td>
+        <td>GBP(livre sterling) > JPY (yen)</td>
+    </tr>
+    </tbody>
+    <tbody>
+    <tr>
+        <td>EUR(euro) > USD (dollar)</td>
+        <td>USD(dollar) > EUR (euro)</td>
+        <td>JPY(yen) > EUR(euro)</td>
+        <td>GBP(livre sterling) > EUR (euro)</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2 class="h3">CONVERSIONS EURO / DOLLAR </h2>
+
+<table class="tableau2">
+    <thead>
+    <tr>
+        <th>1 EUR</th>
+        <th>1,04252</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>10 EUR</td>
+        <td>10,4272 USD</td>
+    </tr>
+    </tbody>
+    <tbody>
+    <tr>
+        <td>50 EUR</td>
+        <td>52,136 USD</td>
+    </tr>
+    </tbody>
+    <tbody>
+    <tr>
+        <td>100 EUR</td>
+        <td>104,272 USD</td>
+    </tr>
+    </tbody>
+</table>
+<h2 class="h3">CONVERSIONS DOLLAR / EURO </h2>
+
+<table class="tableau3">
+    <thead>
+    <tr>
+        <th>1 USD</th>
+        <th>0,96225 EUR</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>10 USD</td>
+        <td>9,6225 EUR</td>
+    </tr>
+    </tbody>
+    <tbody>
+    <tr>
+        <td>50 USD</td>
+        <td>48,1125 EUR</td>
+    </tr>
+    </tbody>
+    <tbody>
+    <tr>
+        <td>100 USD</td>
+        <td>96,225 EUR</td>
+    </tr>
+    </tbody>
+</table>
+
+<script src="js/script.js"></script>
+</body>
+</html>
